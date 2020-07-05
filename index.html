@@ -61,3 +61,23 @@ margin:0;
  </center>   
 </body>
 </html>
+
+<script>
+
+function rand(){
+  return Math.floor(Math.random() * 400);
+  }
+  
+
+var ul = document.querySelector('ul');
+for (var i = ul.children.length; i >= 0; i--) {
+    ul.appendChild(ul.children[Math.random() * i | 0]);
+}
+
+
+links = document.querySelectorAll('.rel-link');
+for (var i=0;i<=links.length;i++){
+links[i].href= '?id=' + + rand();
+}
+
+</script>
