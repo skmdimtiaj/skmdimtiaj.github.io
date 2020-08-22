@@ -12,10 +12,18 @@ This site may have adult content.
 			Site may have adult contents. If Only 18+ then
 			
 		</div>
-		<div style="text-align:center;padding-top:20px;"><button onclick="window.parent.postMessage('msg', '*');" class="btn">Enter</button></div>
+		<!--div style="text-align:center;padding-top:20px;"><button onclick="window.parent.postMessage('msg', '*');" class="btn">Enter</button></div-->
+		<div style="text-align:center;padding-top:20px;"><a id="tos" class="btn" target="_parent">Enter</a></div>
 	</div>
 </div>
+<script>
+var x = document.referrer;
+		
+var url = new URL(x);
+url.searchParams.set('tos', 'true');
 
+document.getElementById('tos').href = url;
+</script>
 <style>
 .btn{
   background-color: #f44336;
